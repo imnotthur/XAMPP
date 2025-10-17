@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <?php
+        $v1 = 15;
+        $v2 = 12;
+        $Divisao = ($v1/$v2);
+        $Multiplicacao = ($v1 * $v2);
+        $Subtracao = ($v1 - $v2);
+        $Soma = ( $v1 + $v2 );
+        echo "<h2> Operações Aritméticas</h2>";
+        echo "Soma v1 + v2. O valor da soma é $Soma" . "<br>";
+        echo "Subtração: v1 - v2. O valor da subtração é $Subtracao "  . "<br>";
+        echo "Multiplicação: v1 * v2. O valor da multiplicação é: $Multiplicacao"   . "<br>";
+        echo "Divisão: v1 / v2. O valor da divisão é $Divisao". "<br>";
+
+        if ($Divisao > 2) {
+            echo "O valor da divisão é maior que 2, sendo ($Divisao)." . "<br> <br>";
+        }
+        elseif ($Divisao == 2 ){
+            echo "O valor da divisão é igual a 2, obviamente, sendo ($Divisao). ". "<br> <br>";
+        }
+        else{
+            echo "A divisão é menor que 2, sendo ($Divisao)." . "<br> <br>";
+        }
+
+
+        
+         if ($Soma == 30 ){
+            echo "O valor da soma é igual a 30, obviamente, sendo ($Soma). ". "<br> <br>";
+        }
+        elseif ($Soma > 25) {
+             echo "O valor da soma é maior que 25, sendo ($Soma)."."<br> <br>";
+        }
+        elseif ($Soma < 25 )
+            echo "A soma é menor que 25, sendo ($Soma)." . "<br> <br>";
+
+       
+       
+        if ($Multiplicacao == 200 ){
+            echo "O valor da multiplicacao é igual a 200, obviamente, sendo ($Multiplicacao). ". "<br> <br>";
+        }
+        elseif ($Multiplicacao > 200) {
+             echo "O valor da multiplicacao é maior que 200, sendo ($Multiplicacao)."."<br> <br>";
+        }
+        elseif ($Multiplicacao < 200 )
+            echo "A multiplicacao é menor que 200, sendo ($Multiplicacao)." . "<br> <br>";
+
+    ?>
+</body>
+</html>
