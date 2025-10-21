@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 3</title>
+    <style>
+        body{
+            background-color: rgba(178, 212, 250, 1);
+            text-align: center;
+        }
+        </style>
+</head>
+<body>
+    <h1> Formulário TLOAS 🧡 </h1>
+        <form  action= "index.php" method="post">
+        <label> Nome:</label><br>
+        <input type = "text" name = "nome" required><br><br>
+        <label> Email:</label> <br>
+        <input type = "email" name = "email" required><br><br>
+        <label> Idade:</label> <br>
+        <input type = "number" name = "idade" required><br><br>
+        <label> Já escutou o The Life Of a Showgirl hoje?</label><br>
+        <input type = "radio" name= "TLOAS" value ="sim" required> Sim <br>
+        <input type = "radio" name= "TLOAS" value ="Não" required> Não <br><br>
+        
+        <input type = "submit" value = "Enviar">
+</form>
+<?php 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nome = $_POST["nome"];
+    $TLOAS = $_POST ["TLOAS"];
+    $ail = $_POST ["email"];
+    $ida = $_POST ["idade"];
+
+
+    echo "<h3> 🧡 Dados recebidos, meu caro (POST)</h3>";
+    echo "Nome: $nome <br>";
+    echo "Escutou o melhor album do ano?: $TLOAS <br>";
+    echo " Seu email é: $ail <br>";
+    echo "Você tem $ida anos <br>";
+
+}
+
+?>
+</body>
+</html>
