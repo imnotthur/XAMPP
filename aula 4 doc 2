@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <?php 
+    if (isset($_GET['campanha']) && isset($_GET['versao'])){
+        $campanha = $_GET['campanha'];
+        $versao = $_GET['versao'];
+    }
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $nomdedoser = $_POST['nome'];
+        $cat = $_POST['categoria'];
+        $pre = $_POST['preco'];
+        $estoq = $_POST['estoque'];
+
+        echo "<h2> Produto cadastrado </h2>";
+        echo "Produto cadastrado: $nomdedoser <br>";
+        echo "Em a categoria: $cat <br>";
+        echo "Com o preço de: R$ $pre <br>";
+        echo "E a quantidade em estoque de: $estoq unidades <br>";
+        echo "<br> Campanha: $campanha <br>";
+        echo "Versão: $versao <br>";
+    }
+?>
+</body>
+</html>
