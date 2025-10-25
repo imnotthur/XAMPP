@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+              background-color: paleturquoise;
+              text-align: center;
+        }
+      
+    
+    </style>
+</head>
+<body>
+     <?php 
+    if (isset($_GET['cadastros']) && isset($_GET['versao'])){
+        $cadastros = $_GET['cadastros'];
+        $versao = $_GET['versao'];
+    }
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $nomedouser = $_POST['nome'];
+        $ida = $_POST['idade'];
+        $turm = $_POST['turma'];
+        $nt1 = $_POST['nota1'];
+        $nt2 = $_POST['nota2'];
+        $media = ($nt1 + $nt2);
+        $medi= ($media/2);
+
+        echo "<h2>Informações dos alunos:</h2>";
+        echo "Aluno: $nomedouser <br><br>";
+        echo "A idade do aluno é: $ida <br><br>";
+        echo "Sendo da turma: $turm <br><br>";
+        echo "Ele possui a nota de $nt1 e $nt2 <br><br>";
+        echo "A média das notas é: $medi<br><br>";
+        
+        echo "<br> Cadastro: $cadastros <br>";
+        echo "Versão: $versao <br><br>";
+    }
+
+    if ($medi >= 6) {
+        echo "Parabéns! Você foi aprovado.";
+     
+    }
+    else {
+        echo "Infelizmente você não foi aprovado!";
+    }
+?>
+</body>
+
+</html>
