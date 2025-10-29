@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: aliceblue;
+            text-align: center;
+        }
+       .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #000000ff;
+            border-radius: 50px;
+            background-color: #cedcf1ff;
+        }
+        
+        h1 {
+            color: #000000ff;
+        }
+        label {
+            font-weight: bold;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+        input, select {
+            margin-top: 5px;
+            margin-bottom: 15px;
+            padding: 8px;
+            width: 300px;
+            max-width: 100%;
+            
+        }
+        input[type="submit"] {
+            width: auto;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        </style>
+</head>
+<body>
+    
+    <h1> Agendamento de conserto a eletrodomésticos </h1> 
+    <form div class = "container" action ="nomedoarquivo.php?agendamento=horario&versao=1.0" method="post">
+        <label> Nome do cliente</label> <br> 
+        <input type="text" name="nome" placeholder="Digite seu nome"> <br><br>
+        <label> Telefone para contato: </label> <br>
+        <input type="tel" name="telefone" placeholder="Digite seu telefone"> <br><br>
+        <label> Tipo de aparelho</label> <br>
+        <select name = "aparelho">
+            <option value = ""> Selecione</option>
+            <option value = "geladeira"> Geladeira </option>
+            <option  value = "fogão"> Fogão </option>
+            <option value = "micro-ondas">Micro-Ondas</option>
+            <option value = "máquina de lavar">Máquina de lavar</option>
+
+        </select><br><br>
+        <label> Qual data de sua preferência?</label> <br>
+        <input tupe = "date" name = "data"> <br><br>
+        <label> Descreva, em poucas palavras o seu problema abaixo:</label><br>
+        <input type = "text" name="problema" placeholder="Descreva o problema"> <br><br>
+        <input type = "submit" value="Agendar conserto">
+    </form>
+</body>
+</html>
